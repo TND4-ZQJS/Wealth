@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Commission Calculator</title>
+    <style>
+        /* Apple-Inspired Styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Main Card-like Container */
+        .container {
+            max-width: 900px;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Table */
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            min-width: 800px;
+        }
+
+        th, td {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #f5f5f7;
+            font-weight: 600;
+        }
+
+        /* Input Fields */
+        input {
+            width: 100%;
+            max-width: 120px;
+            padding: 8px;
+            border: 1px solid #d2d2d7;
+            border-radius: 8px;
+            font-size: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #0071e3;
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 113, 227, 0.3);
+        }
+
+        /* Buttons */
+        button {
+            background: #0071e3;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin: 10px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        button:hover {
+            background: #005bb5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+
+            input {
+                max-width: 100px;
+            }
+
+            table {
+                min-width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Insurance Commission Calculator</h2>
+        <p>Enter the New Business FYP for each financial year:</p>
+        
+        <div class="table-wrapper">
+            <table id="commissionTable">
+                <tr>
+                    <th>Financial Year</th>
+                    <th>New Business FYP (RM)</th>
+                    <th>Payment Term (Years)</th>
+                </tr>
+            </table>
+        </div>
+
+        <button type="button" onclick="autoFill()">Use Year 1 FYP for All</button>
+        <button type="button" onclick="calculateCommission()">Compute</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
