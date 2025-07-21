@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let row = table.insertRow();
         row.innerHTML = `
             <td>${i} Year</td>
-            <td><input type="number" id="year${i}" placeholder="Enter FYP" onfocus="this.value=''"></td>
+            <td><input type="number" id="year${i}" placeholder="Enter FYP"></td>
             <td><input type="number" id="term${i}" value="20"></td>
         `;
     }
